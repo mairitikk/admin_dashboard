@@ -78,7 +78,7 @@ export const tokens = (mode) => ({
           100: "#040509",
           200: "#080b12",
           300: "#0c101b",
-          400: "#f2f0f0", // manually changed
+          400: "#f2f0f0",
           500: "#141b2d",
           600: "#1F2A40",
           700: "#727681",
@@ -120,3 +120,32 @@ export const tokens = (mode) => ({
         },
       }),
 });
+
+//mui theme settings
+export const themeSettings = (mode) => {
+  const colors = tokens(mode);
+
+  return {
+    palette: {
+        mode: mode,
+    ...(mode === 'dark'
+        ? {
+primary :{
+    main: colors.primary[500],
+        },
+secondary:{
+    main: colors.greenAccent[500],
+}, 
+neutral:{
+    dark: colors.gray[700],
+    main: colors.gray[500],
+    light: colors.gray[100]
+},
+background: {
+    default: colors.prymary[500],
+}
+    }
+    )
+  }
+}
+};
