@@ -36,10 +36,10 @@ borderRadius="3px">
 {/*ICONS*/}
 
 <Box display="flex">
-  <IconButton></IconButton>
+  <IconButton onClick={colorMode.toggleColorMode}>{theme.palette.mode === 'dark' ? (<DarkModeOutlineIcon></DarkModeOutlineIcon>) : (<LightModeOutlineIcon></LightModeOutlineIcon>)} </IconButton>
   <IconButton> <NotificationsOutlineIcon></NotificationsOutlineIcon></IconButton>
   <IconButton> <SettingsOutlineIcon></SettingsOutlineIcon></IconButton>
-  <IconButton></IconButton>
+  <IconButton><PersonOutlineIcon></PersonOutlineIcon></IconButton>
   <IconButton></IconButton>
 
 </Box>
