@@ -11,8 +11,21 @@ import SearchIcon from "@mui/icons-material/LightModeOutlined"
 
 
 const Topbar = () => {
+  const theme =useTheme();
+  const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(ColorModeContext);
+
+  
   return (
-    <div>Topbar</div>
+    <Box display="flex" justifyContent="space-between" p={2}>
+
+      {/*SEARCH NAR */}
+<Box display="flex" backgroundColor={colors.primary[400]} borderRadius="3px"> 
+<InputBase sx= {{ml:2, flex:1}} placeholder = "Search"></InputBase>
+</Box>
+
+<IconButton></IconButton>
+    </Box>
   )
 }
 export default Topbar
